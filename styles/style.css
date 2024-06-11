@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+div#container {
+  height: 100vh;
+  background-color: bisque;
+  display: grid;
+  grid-template: 100% / 10% 40%;
+  justify-content: center;
+}
+
+header {
+  background-color: white;
+  text-align: center;
+  z-index: 2;
+  padding: 5px;
+}
+
+button#run-btn {
+  border: none;
+  background: #f6c97e;
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+div#score-cont {
+  margin-top: 10px;
+  font-family: sans-serif;
+}
+
+div#game-area {
+  background-color: rgb(255, 236, 215);
+  padding: 0 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* small screens */
+@media (max-width: 767px) {
+  div#container {
+    grid-template: 1fr 10fr / 90%;
+  }
+}
